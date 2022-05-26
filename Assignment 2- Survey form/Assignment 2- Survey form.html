@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey form</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        background-image: url(Tree.jpg);
+        background-size: cover;
+      }
+
+      form {
+        background-color: rgba(0, 0, 0, 0.7);
+        font-family: sans-serif;
+        font-size: large;
+        padding-top: 34px;
+        color: white;
+        align-items: center;
+        justify-content: center;
+        width: 54%;
+        border-radius: 5px;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-bottom: 60px;
+      }
+      .box {
+        width: 80%;
+        padding: 0.5rem 1rem;
+        background-color: rgb(230, 230, 230, 0.6);
+        font-size: 1.1rem;
+        margin-bottom: 22px;
+        transition: 0.3s;
+        outline: none;
+        border: 2px solid rgba(0, 0, 0, 0);
+        margin-left: 40px;
+      }
+      .heading {
+        text-align: center;
+      }
+      .formelement {
+        margin-left: 40px;
+        padding-bottom: 20px;
+      }
+      .btn {
+        width: 40%;
+        padding: 0.5rem 1 rem;
+        font-size: 1.1rem;
+        background-color: #2ecc71;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        transition: 0.3s;
+      }
+      .label {
+        margin-left: 40px;
+        margin-top: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="heading"></div>
+    <form>
+      <div class="heading">
+        <h1>Tree Survey Form</h1>
+        <h4>A survey form on the health of the environment</h4>
+      </div>
+      <label for="name" class="label">Name:</label><br />
+      <input
+        type="text"
+        class="box"
+        name="username"
+        placeholder="Enter you name. e.g. John Doe"
+        id="username"
+        autofocus
+      />
+      <br />
+      <label for="email" class="label">Email:</label><br />
+      <input
+        type="email"
+        class="box"
+        name="email"
+        placeholder="xyz@someplace.com"
+        id="email"
+      />
+      <br />
+      <label for="age" class="label">Age:</label><br />
+      <input type="number" class="box" name="age" placeholder="10" id="age" />
+      <br /><br />
+      <label for="continent" class="label"
+        >Select the continent of Residence</label
+      ><br />
+      <select id="continent" class="formelement" name="continent">
+        <option value="asia">Asia</option>
+        <option value="northAmerica">North America</option>
+        <option value="africa">Africa</option>
+        <option value="europe">Europe</option>
+        <option value="southAmerica">South America</option>
+        <option value="australia">Australia</option></select
+      ><br /><br />
+      <h2 class="heading">Choose you preferred gender</h2>
+
+      <input
+        type="radio"
+        class="formelement"
+        id="male"
+        name="gender"
+        value="male"
+      /><label for="male">Male</label><br />
+
+      <input
+        type="radio"
+        class="formelement"
+        id="female"
+        name="gender"
+        value="female"
+      />
+      <label for="female">Female</label><br />
+
+      <input
+        type="radio"
+        class="formelement"
+        id="other"
+        name="gender"
+        value="other"
+      /><label for="other">Other</label><br /><br />
+      <h2 class="heading">Please select at least one of the options below</h2>
+      <input
+        type="checkbox"
+        class="formelement"
+        id="opt1"
+        name="plantTree"
+        value="opt1"
+      /><label for="opt1">I have planted a tree or any other Plant</label
+      ><br /><br />
+      <input
+        type="checkbox"
+        class="formelement"
+        id="opt2"
+        name="plantTree"
+        value="opt2"
+      /><label for="opt2"
+        >I take part in community service for the environment</label
+      ><br /><br />
+      <input
+        type="checkbox"
+        class="formelement"
+        id="opt3"
+        name="plantTree"
+        value="opt3"
+      /><label for="opt3">II promise to plant more from now on</label
+      ><br /><br />
+      <br />
+      <h2 class="heading">Any comments or suggestions</h2>
+      <textarea name="suggestions" class="formelement" cols="50" rows="6">
+Comments/Suggestions</textarea
+      ><br />
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </body>
+</html>

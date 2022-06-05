@@ -11,23 +11,35 @@
         padding: 0px;
         margin: 0px;
       }
+
       .header {
         color: white;
         background-color: teal;
         text-align: center;
-        padding-top: 40px;
-        margin-bottom: 0px;
-        position: relative;
+        /* 1. Added this */
+        padding: 80px;
+
+        /* 2. Removed this */
+        /* padding-top: 40px;
+        margin-bottom: 0px; */
+        /* position: relative; */
       }
 
       .navbar {
+        /* 3. Removed overflow from .navbar ul and added it here */
+        overflow: hidden;
         background-color: rgba(0, 0, 0, 0.745);
         width: 100%;
         position: sticky;
+        /*4.  added the top value where it is suppose to stick */
+        top: 0;
       }
+      /*
+      5 .deleted this. if you uncomment you will see extra white liner above navbar.
+
       .navbar ul {
         overflow: auto;
-      }
+      } */
       .navbar li {
         float: left;
         list-style: none;
@@ -68,19 +80,25 @@
     </style>
   </head>
   <body>
-    <div class="header">
+    <!-- 6.Changed <div class="header"> 
+    to 
+    <header class="header">
+    
+        7.Shifted nav out of header 
+    -->
+    <header class="header">
       <h1>My Website</h1>
       <p>A <b>responsive</b> website created by me.</p>
+    </header>
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+      </ul>
+    </nav>
 
-      <nav class="navbar">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-          <li><a href="#">Link</a></li>
-        </ul>
-      </nav>
-    </div>
     <div class="grid-container">
       <div class="container1">
         <div class="text">

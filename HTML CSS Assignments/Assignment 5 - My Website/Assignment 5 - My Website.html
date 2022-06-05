@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Website</title>
+    <style>
+      body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      .navbar {
+        background-color: rgba(0, 0, 0, 0.745);
+        width: 100%;
+        position: sticky;
+        color: white;
+      }
+      .navbar ul {
+        overflow: auto;
+      }
+      .navbar li {
+        float: left;
+        list-style: none;
+        margin: 13px 20px;
+      }
+      .navbar li a {
+        padding: 3px 3px;
+        text-decoration: none;
+        color: white;
+      }
+      .image {
+        background-image: url("cosmos.jpg");
+        height: 100px;
+        color: white;
+        text-align: center;
+        padding: 100px;
+      }
+      .button {
+          padding: 20px;
+          background-color: rgba(0, 0, 0, 0.304);
+          font-size: 22px;
+          border-radius: 12px;
+          margin-left: 12px;
+          margin-right: 12px;
+          border-color: azure;
+          color: beige  ;
+      }
+      .button:hover {
+          background-color: rgba(128, 128, 128, 0.412);
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar">
+      <ul>
+        <li><img src="Profile.png" height="40px" /></li>
+        <li>Website</li>
+        <li><a href="#">Feature</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Sign Up</a></li>
+      </ul>
+    </nav>
+    <div class="image">
+      <h1>Website Title</h1>
+      <h3>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quas
+        minima a.
+      </h3>
+      <button class="button" type="submit">Learn more</button>
+      <button class="button type="submit">Sign Up</button>
+    </div>
+  </body>
+</html>

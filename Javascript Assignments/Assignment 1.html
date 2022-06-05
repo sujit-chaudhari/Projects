@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let contacts = [
+        {
+          firstName: "sujit",
+          lastName: "chaudhari",
+          phoneNmber: 123,
+          likes: ["html", "css", "javascript"],
+        },
+        {
+          firstName: "sachin",
+          lastName: "tendulkar",
+          phoneNmber: 2345,
+          likes: ["food", "cooking", "blog"],
+        },
+        {
+          firstName: "virat",
+          lastName: "kohli",
+          phoneNmber: 234,
+          likes: ["reading", "writing", "surfing"],
+        },
+        {
+          firstName: "jasprit",
+          lastName: "bumrah",
+          phoneNmber: 345,
+          likes: ["cricket", "baseball", "hockey"],
+        },
+        {
+          firstName: "saina",
+          lastName: "nehwal",
+          phoneNmber: 456,
+          likes: ["badminton", "chess", "travelling"],
+        },
+      ];
+      function checkFunction(chkProperty) {
+        return contacts.hasOwnProperty(chkProperty);
+      }
+      console.log(checkFunction("sujit"));
+    </script>
+  </body>
+</html>

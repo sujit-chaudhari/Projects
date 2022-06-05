@@ -1,0 +1,12 @@
+1.Create an object = contacts [{} , {} , {} ,{} ,{}]
+  2.Object property = firstName:'', lastName:'',phone:number , likes:['','','']
+  3.Create function , take 2 parameters
+  4. 1st parameter is for firstName , 2nd parameter is for property
+  5.if firstName exists in object then find if the provided property exists for the
+  given firstName
+
+  if valid name and valid property = return value of the property
+  if valid name but not valid property = return no such property
+  if name not valid = return no such contact
+
+  checkProperty('Pooja','gifts')

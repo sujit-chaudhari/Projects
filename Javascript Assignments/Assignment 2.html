@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 2</title>
+  </head>
+  <body>
+    <!-- 1.Replace the content in document
+    2.display number of elements with a specific class name
+    3.display number of elements with a specific tag name
+    4.find the number of anchors in document
+    5.Create p , button from js
+    6. find the first element with class name example
+    7.Apply background to all paragraphs
+    8.Apply border to all div with id broderDiv -->
+    <p id="replace">Original text</p>
+    <div class="classTags">class tag 1</div>
+    <div class="classTags">class tag 2</div>
+    <p class="classTags">class tag 3</p>
+    <h3 class="classTags">class tag 4</h3>
+    <div id="borderDiv">Random Div Tag 1</div>
+    <p>Random Paragraph 1</p>
+    <div id="borderDiv">Random Div Tag 2</div>
+    <p>Random Paragraph 2</p>
+    <a href="https://www.google.com" target="_blank">Google</a>
+    <script>
+      // 1.Replace the content in document
+      document.getElementById("replace").innerHTML = "Replaced Text";
+
+      // 2.display number of elements with a specific class name
+      console.log(
+        "Total number of elements with class 'classTags' is =>",
+        document.getElementsByClassName("classTags").length
+      );
+
+      // 3.display number of elements with a specific tag name
+      console.log(
+        "Total number of div tag elements is =>",
+        document.getElementsByTagName("p").length
+      );
+
+      // 4.find the number od anchors in document
+      console.log(
+        "Total number of anchor tag elements is =>",
+        document.getElementsByTagName("a").length
+      );
+
+      //   5.Create p , button from js
+      const newPara = document.createElement("p");
+      newPara.innerText = "New paragraph Text";
+      document.body.appendChild(newPara);
+
+      const submitButton = document.createElement("button");
+      submitButton.innerHTML = "Click Button";
+      document.body.appendChild(submitButton);
+
+      //   6. find the first element with class name example
+      document.querySelector(".classTags").style.backgroundColor = "blue";
+
+      //   7.Apply background to all paragraphs
+      const allParagraphs = document.querySelectorAll("p");
+      for (let i = 0; i < allParagraphs.length; i++) {
+        allParagraphs[i].style.backgroundColor = "skyblue";
+      }
+
+      //   8.Apply border to all div with id broderDiv
+      const allDiv = document.querySelectorAll("#borderDiv");
+      for (let i = 0; i < allDiv.length; i++) {
+        allDiv[i].style.border = "2px solid green";
+      }
+    </script>
+  </body>
+</html>

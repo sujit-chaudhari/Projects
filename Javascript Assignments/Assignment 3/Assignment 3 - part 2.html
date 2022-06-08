@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Lato", sans-serif;
+        background-image: url(background.jpg);
+      }
+      .flex-container {
+        display: flex;
+        justify-content: center;
+
+        margin-top: 10vh;
+        margin-bottom: auto;
+      }
+      .shoe {
+        width: 350px;
+        height: 100%;
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+      }
+      button {
+        width: 80%;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 20px;
+        background-image: linear-gradient(
+          to right,
+          rgb(129, 2, 104),
+          rgb(210, 68, 223)
+        );
+        cursor: pointer;
+        border: none;
+        /* outline: 2px solid gray;
+        outline-offset: 2px; */
+      }
+      button:hover {
+        background-color: rgba(100, 16, 16, 0.412);
+      }
+      /* h2 {
+        display: block;
+
+        margin-block-start: 0.83em;
+        margin-block-end: 0.83em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        font-weight: bold;
+      } */
+      h3 {
+        display: block;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+      }
+      form {
+        /* margin-left: 30px; */
+      }
+      label {
+        margin-bottom: 15px;
+      }
+      .column {
+        padding: 20px;
+        background-color: white;
+        border-top-right-radius: 15px;
+        border-bottom-right-radius: 15px;
+        width: 25rem;
+      }
+
+      .inputElement {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        /* margin-left: 20px; */
+        margin-right: auto;
+      }
+      .inputElement2 {
+        width: 33.5%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="leftContainer">
+        <img src="shoe.jpg" class="shoe" alt="" />
+      </div>
+      <div class="rightContainer">
+        <div class="column">
+          <form action="">
+            <h2>CheckOut</h2>
+            <h3>Payment Information</h3>
+
+            <label for="name">Cardholder Name</label><br />
+            <input
+              type="text"
+              class="inputElement"
+              name="cardholder"
+              id="name"
+            /><br />
+
+            <label for="card">Card Number</label><br />
+            <input
+              type="text"
+              class="inputElement"
+              name="card number"
+              id="card"
+            /><br />
+
+            <label for="type">Card Type</label><br />
+            <select name="card type" class="inputElement" id="type">
+              <option value="">-Select a Card Type-</option>
+              <option value="Visa">Visa</option>
+              <option value="RuPay">RuPay</option>
+              <option value="MasterCard">MasterCard</option></select
+            ><br />
+
+            <label for="expiry">Expiry Date </label>
+            <input
+              type="text"
+              placeholder="MM / YY"
+              class="inputElement2"
+              name="expiry"
+              id=""
+            />
+
+            <label for="cvv">&nbsp;cvv </label>
+            <input
+              type="number"
+              class="inputElement2"
+              name="CVV"
+              id="cvv"
+              maxlength="
+              3"
+            />
+            <br />
+            <center><button type="submit">CheckOut</button></center>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

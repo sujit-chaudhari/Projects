@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        background-color: rgba(220, 217, 217, 0.283);
+      }
+      .section {
+        padding: 5rem 0;
+      }
+      .title {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      .underline {
+        width: 5rem;
+        height: 0.25rem;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: gold;
+      }
+      .btn-container {
+        margin-bottom: 4rem;
+        display: flex;
+        justify-content: center;
+      }
+      .filter-btn {
+        margin-left: 10px;
+        padding: 10px;
+        border: 2px solid gold;
+        border-radius: 5px;
+        color: brown;
+        font-weight: bold;
+        text-transform: capitalize;
+      }
+      .section-center {
+        width: 90vw;
+        margin: 0 auto;
+        max-width: 1170px;
+        display: grid;
+        gap: 3rem 2rem;
+        justify-items: center;
+      }
+      .menu-item {
+        display: grid;
+        gap: 1rem 2rem;
+        max-width: 25rem;
+      }
+      .photo {
+        object-fit: cover;
+        height: 200px;
+        border: 0.25rem solid var(--clr-gold);
+        border-radius: var(--radius);
+      }
+
+      .item-info header {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 0.5px dotted var(--clr-grey-5);
+      }
+      .item-info h4 {
+        margin-bottom: 0.5rem;
+        text-transform: capitalize;
+      }
+      .price {
+        color: navy;
+      }
+      .item-text {
+        margin-bottom: 0;
+        padding-top: 1rem;
+        color: rgba(154, 107, 212, 0.98);
+      }
+      .menu-item {
+        grid-template-columns: 225px 1fr;
+        gap: 0 1.25rem;
+        max-width: 40rem;
+      }
+      .section-center {
+        width: 95vw;
+        grid-template-columns: 1fr 1fr;
+      }
+      .photo {
+        height: 150px;
+        width: 200px;
+        border: 4px inset sienna;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="menu">
+      <div class="title">
+        <h2>Our Menu</h2>
+        <div class="underline"></div>
+      </div>
+      <div class="btn-container">
+        <button class="filter-btn" type="button" data-id="all">all</button>
+        <button class="filter-btn" type="button" data-id="breakfast">
+          breakfast
+        </button>
+        <button class="filter-btn" type="button" data-id="lunch">lunch</button>
+        <button class="filter-btn" type="button" data-id="shakes">
+          shakes
+        </button>
+      </div>
+      <div class="section-center">
+        <article class="menu-item">
+          <img src="" alt="menu-item" class="photo" />
+          <div class="item-info">
+            <header>
+              <h4>buttermilk pancakes</h4>
+              <h4 class="price">$15</h4>
+            </header>
+            <p class="item-text">Sample Text</p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <script>
+      const menu = [
+        {
+          id: 1,
+          title: "appam",
+          category: "breakfast",
+          price: 40,
+          img: "appam.jpg",
+          desc: "A type of pancake, originating from South India, made with fermented rice batter and coconut milk, common in Kerala, India. ",
+        },
+        {
+          id: 2,
+          title: "biryani",
+          category: "lunch",
+          price: 100,
+          img: "biryani.jpg",
+          desc: " A spiced mix of meat and rice, traditionally cooked over an open fire in a leather pot. It is combined in different ways with a variety of components to create a number of highly tasty and unique flavor combinations. ",
+        },
+        {
+          id: 3,
+          title: "butter chicken",
+          category: "lunch",
+          price: 150,
+          img: "butterchicken.jpg",
+          desc: "A type of curry made from chicken with a spiced tomato and butter (makhan) sauce. Its sauce is known for its rich texture.",
+        },
+        {
+          id: 4,
+          title: "cold coffee",
+          category: "shakes",
+          price: 60,
+          img: "coldcoffee.jpg",
+          desc: "A coffee beverage served cold. It may be prepared either by brewing coffee normally (i.e. carafe, French press, etc.) and then serving it over ice or in cold milk, or by brewing the coffee cold. ",
+        },
+        {
+          id: 5,
+          title: "idly sambar",
+          category: "breakfast",
+          price: 50,
+          img: "idlysambar.jpg",
+          desc: "A South Indian breakfast meal where soft fluffy steamed cakes known as idli are served with sambar, a vegetable lentil stew. ",
+        },
+        {
+          id: 6,
+          title: "lassi",
+          category: "shakes",
+          price: 40,
+          img: "lassi.jpg",
+          desc: "A creamy, frothy yogurt-based drink, blended with water and various fruits or seasonings (such as salt or sugar).",
+        },
+        {
+          id: 7,
+          title: "mango mastani",
+          category: "shakes",
+          price: 70,
+          img: "mangomastani.jpg",
+          desc: "A  thick milkshake topped with ice cream, mangoes, nuts and dry fruits. A special drink from the city of Pune in India.",
+        },
+        {
+          id: 8,
+          title: "medu vada",
+          category: "breakfast",
+          price: 60,
+          img: "meduvada.jpg",
+          desc: "A South Indian breakfast snack made from Vigna mungo (black lentil). It is usually made in a doughnut shape, with a crispy exterior and soft interior.",
+        },
+        {
+          id: 9,
+          title: "mutton curry",
+          category: "lunch",
+          price: 150,
+          img: "muttoncurry.jpg",
+          desc: "A dish of slow cooked mutton (goat or lamb) in a spicy gravy.",
+        },
+        {
+          id: 10,
+          title: "poha",
+          category: "breakfast",
+          price: 30,
+          img: "poha.jpg",
+          desc: "A light, fluffy dish made with flattened rice seasoned with onions, potatoes, and warming spices. ",
+        },
+        {
+          id: 11,
+          title: "ravadosa",
+          category: "breakfast",
+          price: 40,
+          img: "ravadosa.jpg",
+          desc: "A South Indian breakfast made with semolina, cumin, ginger, coriander leaves and green chilies. ",
+        },
+        {
+          id: 12,
+          title: "veg thali",
+          category: "lunch",
+          price: 110,
+          img: "vegthali.jpg",
+          desc: "A complete meal served on a single plate with gravy, dal or curry, sabzi or stir fry, condiments like raita, chutney, pickle, salad, papadum ",
+        },
+      ];
+      const sectionCenter = document.querySelector(".section-center");
+      // const filterBtns = document.querySelectorAll('.filter-btn')
+      const btnContainer = document.querySelector(".btn-container");
+      window.addEventListener("DOMContentLoaded", function () {
+        displayMenuItems(menu);
+      });
+
+      //   break
+
+      function displayMenuItems(menuItems) {
+        let displayMenu = menuItems.map(function (item) {
+          return `<article class="menu-item">
+              <img src="${item.img}" alt="${item.title}" class="photo" />
+              <div class="item-info">
+                <header>
+                  <h4>${item.title}</h4>
+                  <h4 class="price">Rs. ${item.price}</h4>
+                </header>
+                <p class="item-text">
+                    ${item.desc}
+                </p>
+              </div>
+            </article>`;
+        });
+        displayMenu = displayMenu.join("");
+        sectionCenter.innerHTML = displayMenu;
+      }
+      //   break
+      const filterBtns = btnContainer.querySelectorAll(".filter-btn");
+      filterBtns.forEach(function (btn) {
+        btn.addEventListener("click", function (e) {
+          console.log(e.currentTarget.dataset.id);
+          const category = e.currentTarget.dataset.id;
+          const menuCategory = menu.filter(function (menuItem) {
+            // console.log(menuItem.category);
+            if (menuItem.category === category) {
+              return menuItem;
+            }
+          });
+          if (category === "all") {
+            displayMenuItems(menu);
+          } else {
+            displayMenuItems(menuCategory);
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

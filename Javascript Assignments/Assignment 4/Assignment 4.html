@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+    <style>
+      *,
+      ::after,
+      ::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        background: hsl(210, 36%, 96%);
+        color: hsl(209, 61%, 16%);
+        line-height: 1.5;
+        font-size: 0.875rem;
+      }
+      .menu-head {
+        text-align: center;
+        margin-bottom: 1rem;
+      }
+      .menu-btns-container {
+        margin-bottom: 4rem;
+        display: flex;
+        justify-content: center;
+      }
+      .menu-btn {
+        background: transparent;
+        border-color: #c59d5f;
+        font-size: 1rem;
+
+        margin: 0 0.5rem;
+        letter-spacing: 1px;
+        border-radius: 0.5rem;
+        padding: 0.375rem 0.75rem;
+        color: #c59d5f;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="menu">
+      <div class="menu-container">
+        <div class="menu-head">
+          <h2>Our Menu</h2>
+        </div>
+        <div class="menu-btns-container">
+          <button type="button" class="menu-btn active-btn" id="all">
+            All
+          </button>
+          <button type="button" class="menu-btn" id="breakfast">
+            Breakfast
+          </button>
+          <button type="button" class="menu-btn" id="lunch">Lunch</button>
+          <button type="button" class="menu-btn" id="shakes">Shakes</button>
+        </div>
+      </div>
+    </section>
+    <script>
+      let items = [
+        {
+          image:
+            "https://static.toiimg.com/thumb/61912223.cms?imgsize=309993&width=800&height=800",
+          name: "Buttermilk Pancakes",
+          price: "$15",
+          description:
+            "Buttermilk Pancakes have a light and spongy texture and their flavor only hints of the richness and tanginess that buttermilk offers. ",
+          category: "breakfast",
+        },
+        {
+          image:
+            "https://static.onecms.io/wp-content/uploads/sites/23/2022/03/30/easy-dinner-recipes.jpg",
+          name: "Double Dinner",
+          price: "$15",
+          description:
+            "You'll serve the chops with a peppery arugula and stone-fruit salad; a perfect savory-sweet dinner pairing. Peaches and apricots are called for here, but any in-season stone fruit, like plums or nectarines, will taste great too",
+          category: "lunch",
+        },
+        {
+          image:
+            "https://vishal-raj-1.github.io/Awesome-JavaScript-Projects/assets/Images/foodCourt/item-3.jpeg",
+          name: "Godzilla Milkshake",
+          price: "$15",
+          description:
+            "You'll serve the chops with a peppery arugula and stone-fruit salad; a perfect savory-sweet dinner pairing. Peaches and apricots are called for here, but any in-season stone fruit, like plums or nectarines, will taste great too",
+          category: "shakes",
+        },
+        {
+          image:
+            "https://vishal-raj-1.github.io/Awesome-JavaScript-Projects/assets/Images/foodCourt/item-4.jpeg",
+          name: "Country Delight",
+          price: "$15",
+          description:
+            "Shabby chic keffiyeh neutra snackwave pork belly shoreditch. Prism austin mlkshk truffaut",
+          category: "breakfast",
+        },
+        {
+          image:
+            "https://vishal-raj-1.github.io/Awesome-JavaScript-Projects/assets/Images/foodCourt/item-6.jpeg",
+          name: "Oreo Dream",
+          price: "$15",
+          description:
+            "Portland chicharrones ethical edison bulb, palo santo craft beer chia heirloom iPhone everyday",
+          category: "shakes",
+        },
+        {
+          image:
+            "https://vishal-raj-1.github.io/Awesome-JavaScript-Projects/assets/Images/foodCourt/item-5.jpeg",
+          name: "Egg Attack",
+          price: "$15",
+          description:
+            "franzen vegan pabst bicycle rights kickstarter pinterest meditation farm-to-table 90's pop-up",
+          category: "lunch",
+        },
+      ];
+      let article = document.createElement("div");
+      article.setAttribute("class", "menu-description");
+
+      let img = document.createElement("img");
+      img.setAttribute("class", "image");
+
+      let info = document.createElement("div");
+
+      let itemName = document.createElement("h4");
+      itemName.setAttribute("id", "item-name");
+      itemName.innerHTML = name;
+
+      let price = document.createElement("span");
+      price.setAttribute("id", "menu-price");
+
+      let p = document.createElement("p");
+      p.setAttribute("class", "menu-description");
+
+      article.appendChild(img);
+      article.appendChild(info);
+
+      info.appendChild(itemName);
+      info.appendChild(price);
+      info.appendChild(p);
+
+      let breakfast1 = document.getElementById("breakfast");
+      function breakfast() {
+        img.innerHTML = items[0]["image"];
+        itemName.innerText = items[0]["name"];
+      }
+      breakfast1.addEventListener("click", breakfast);
+    </script>
+  </body>
+</html>
